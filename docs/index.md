@@ -17,7 +17,7 @@ CellExplorer is a graphical user interface (GUI), a standardized processing modu
 
 ## Introduction
 {: .no_toc}
-The large diversity of cell-types of the brain, provides the means by which circuits perform complex operations. Understanding such diversity is one of the key challenges of modern neuroscience. Neurons have many unique electrophysiological and behavioral features from which parallel cell-type classification can be inferred.
+The large diversity of cell-types of the brain, provides the means by which circuits perform complex operations. Understanding such diversity is one of the key challenges of modern neuroscience. Neurons have many unique electrophysiological and behavioral features from which parallel cell-type classification can be inferred. 
 
 To address this, we built CellExplorer, a framework for analyzing and characterizing single cells recorded using extracellular electrodes. It can be separated into three components: a standardized yet flexible data structure, a single yet extensive processing module, and a powerful graphical interface. Through the processing module, a high dimensional representation is built from electrophysiological and functional features including the spike waveform, spiking statistics, monosynaptic connections, and behavioral spiking dynamics. The user-friendly interactive graphical interface allows for classification and exploration of those features, through a rich set of built-in plots, interaction modes, cell grouping, and filters. Powerful figures can be created for publications. Opto-tagged cells and public access to reference data have been incorporated to help you characterize your data better. The framework is built entirely in MATLAB making it fast and intuitive to implement and incorporate CellExplorer into your pipelines and analysis scripts. You can expand it with your metrics, plots, and opto-tagged data. The paper is published in Neuron: [https://doi.org/10.1016/j.neuron.2021.09.002](https://www.sciencedirect.com/science/article/pii/S0896627321006565).
 
@@ -27,7 +27,7 @@ To address this, we built CellExplorer, a framework for analyzing and characteri
 ## Getting started
 1. [Clone](x-github-client://openRepo/https://github.com/petersenpeter/CellExplorer), fork, or [download](https://github.com/petersenpeter/CellExplorer/archive/master.zip) the repository (cloning or forking is recommended).
 2. Add the local repository to your MATLAB setpath (make sure to select __Add with subfolders...__). 
-3. The pipeline uses two c-code files that must be compiled `CCGHeart.c` and `FindInInterval.c` (originally part of the FMA toolbox). Compiled versions are included for Windows 64bit and Intel Mac 64bit, but you still have to compile them if your OS version is different. __If you are using Linux__ you have to compile the scripts. In MATLAB, go to `CellExplorer/calc_CellMetrics/mex/` and run these line:
+3. The pipeline uses two c-code files that must be compiled `CCGHeart.c` and `FindInInterval.c` (originally part of the FMA toolbox). Compiled versions are included for Windows 64bit, Intel Mac 64bit, and Apple Silicon (ARM; M1 and later), but you have to compile the scripts if your OS version is different (__e.g. Linux__). In MATLAB, go to `CellExplorer/calc_CellMetrics/mex/` and run these line:
 ```m
 mex -O CCGHeart.c
 mex -O FindInInterval.c
